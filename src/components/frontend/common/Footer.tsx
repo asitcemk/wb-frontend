@@ -5,7 +5,7 @@ const Footer = (props: any) => {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
       {"Copyright © "}
-      <Link color="inherit" to="/">
+      <Link color="inherit" to="/admin">
         Wowbridge
       </Link>{" "}
       {new Date().getFullYear()}.
