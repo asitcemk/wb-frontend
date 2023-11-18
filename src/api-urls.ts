@@ -1,4 +1,4 @@
-const ROOT_URL = "http://localhost:4000/";
+const ROOT_URL = "https://asit-wb-backend.onrender.com/";
 
 export const ApiUrls = {
 		INTERNATIONALIZATIONLOAD: `${ROOT_URL}api/internationalization/`,
