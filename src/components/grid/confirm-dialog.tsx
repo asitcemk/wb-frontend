@@ -81,7 +81,7 @@ export default function ConfirmDialog(props: any) {
       </DialogContent>
       <DialogActions>
         <Button onClick={handleClose} variant="outlined" color="secondary">
-          No
+          {t("No")}
         </Button>
         <Button
           onClick={handleClick}
@@ -89,7 +89,7 @@ export default function ConfirmDialog(props: any) {
           color="primary"
           autoFocus
         >
-          Yes
+          {t("Yes")}
         </Button>
       </DialogActions>
     </Dialog>

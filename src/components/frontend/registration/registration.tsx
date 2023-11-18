@@ -38,8 +38,8 @@ function Registration(props: any) {
   }>();
   const [showPassword, setShowPassword] = useState(false);
   const [genderList] = useState([
-    { value: "Male", label: "Male" },
-    { value: "Female", label: "Female" },
+    { value: "Male", label: t("Male") },
+    { value: "Female", label: t("Female") },
   ]);
   const [codeOptions] = useState([
     {

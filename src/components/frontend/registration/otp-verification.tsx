@@ -66,9 +66,9 @@ function OtpVerification(props: any) {
       <form onSubmit={handleSubmit(otpSubmit)}>
         <Grid container justifyContent="center" alignItems="center">
           <div>
-            <h1>Verification Code</h1>
+            <h1>{t("Verification Code")}</h1>
             <Typography>
-              Please type the verification code sent to{" "}
+              {t("Please type the verification code sent to")}{" "}
               {localStorage.getItem("_e")}
             </Typography>
             <Grid container spacing={2} justifyContent="center">
@@ -113,7 +113,7 @@ function OtpVerification(props: any) {
                     className="button"
                     onClick={cancel}
                   >
-                    Cancel
+                    {t("Cancel")}
                   </Button>
                   <Button
                     type="submit"

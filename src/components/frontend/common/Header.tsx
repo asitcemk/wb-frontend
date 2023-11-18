@@ -84,8 +84,8 @@ export default function Header(props: any) {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={onMyAccountClick}>My account</MenuItem>
-      <MenuItem onClick={handleLogout}>Logout</MenuItem>
+      <MenuItem onClick={onMyAccountClick}>{t("My account")}</MenuItem>
+      <MenuItem onClick={handleLogout}>{t("Logout")}</MenuItem>
     </Menu>
   );
 

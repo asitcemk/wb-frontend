@@ -39,7 +39,7 @@ function CreateColumns(props: any) {
 
   return (
     <Container maxWidth="xl">
-      <h1>Create Columns</h1>
+      <h1>{t("Create Columns")}</h1>
       <form onSubmit={handleSubmit(submit)}>
         <Grid container>
           <Grid item sm={12} xs={12}>

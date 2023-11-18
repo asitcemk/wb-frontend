@@ -8,7 +8,7 @@ function Dashboard(props: any) {
   return (
     <>
     <Grid container direction="row" spacing={0}>
-      <h2>Welcome to Wowbridge Admin Dashboard</h2>
+      <h2>{t("Welcome to Wowbridge Admin Dashboard")}</h2>
       <div style={{height:'500px'}}></div>
       </Grid>
     </>

@@ -16,6 +16,7 @@ import MilitaryTechIcon from "@mui/icons-material/MilitaryTech";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import { useTranslation } from "react-i18next";
 import { useNavigate, useLocation, useSearchParams } from "react-router-dom";
 import { Token } from "./../../actions/environment/header-configure";
 import { ApiUrls } from "./../../api-urls";
@@ -31,6 +32,7 @@ import {
 type Order = "asc" | "desc";
 
 export default function Home(props: any) {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const [searchParams] = useSearchParams();
@@ -137,12 +139,12 @@ export default function Home(props: any) {
       <Grid container spacing={2} alignItems="center">
         <Grid item xs={8}>
           <h1>
-            {count} {count > 1 ? "Users" : "User"} Available
+            {count} {count > 1 ? t("Users") : t("User")} {t("Available")}
           </h1>
         </Grid>
         <Grid item xs={2} justifyContent="flex-end">
           <TextField
-            label="Search"
+            label={t("Search")}
             variant="outlined"
             onChange={handleSearch}
             value={searchTxt}
@@ -217,13 +219,13 @@ export default function Home(props: any) {
                             {row && row.status ? (
                               <Chip
                                 size="small"
-                                label="Active"
+                                label={t("Active")}
                                 color="success"
                               />
                             ) : (
                               <Chip
                                 size="small"
-                                label="Inactive"
+                                label={t("Inactive")}
                                 color="error"
                               />
                             )}
@@ -240,7 +242,7 @@ export default function Home(props: any) {
                               color="primary"
                               sx={{ fontSize: 15 }}
                             />{" "}
-                            Created at{" "}
+                            {t("Created at")}{" "}
                             {row ? dateTimeFormat(row.createdAt) : ""}
                           </Typography>
                         </Grid>

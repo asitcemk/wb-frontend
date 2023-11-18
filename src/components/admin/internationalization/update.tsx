@@ -48,6 +48,7 @@ function InternationalizationUpdate(props: any) {
     textField.select();
     document.execCommand("copy");
     textField.remove();
+    showMessage("success", "Language Copied");
   };
 
   const submit = (values: any) => {
@@ -67,7 +68,7 @@ function InternationalizationUpdate(props: any) {
 
   return (
     <Container maxWidth="xl">
-      <h1>Update Internationalization</h1>
+      <h1>{t("Update Internationalization")}</h1>
       <form onSubmit={handleSubmit(submit)}>
         <Grid container spacing={2}>
           <Grid item sm={12} xs={12}>

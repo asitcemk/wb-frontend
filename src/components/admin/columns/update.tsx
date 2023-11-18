@@ -58,7 +58,7 @@ function ColumnsUpdate(props:any) {
  
   return (
     <Container maxWidth="xl">
-    <h1>Update Columns</h1>
+    <h1>{t("Update Columns")}</h1>
      <form onSubmit={handleSubmit(submit)}>
        <Grid container >
          <Grid item sm={12} xs={12}>

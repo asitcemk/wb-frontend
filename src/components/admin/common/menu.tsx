@@ -15,6 +15,7 @@ import ViewColumnIcon from "@mui/icons-material/ViewColumn";
 import PeopleIcon from '@mui/icons-material/People';
 import LanguageIcon from "@mui/icons-material/Language";
 import { Link } from "react-router-dom";
+import { t } from "i18next";
 
 const drawerWidth = 240;
 
@@ -101,7 +102,7 @@ export default function LeftMenu(props: any) {
                 <DashboardIcon />
               </ListItemIcon>
               <ListItemText
-                primary="Dashboard"
+                primary={t("Dashboard")}
                 sx={{ opacity: open ? 1 : 0 }}
               />
             </ListItemButton>
@@ -130,7 +131,7 @@ export default function LeftMenu(props: any) {
                 <LanguageIcon />
               </ListItemIcon>
               <ListItemText
-                primary="Internationalization"
+                primary={t("Internationalization")}
                 sx={{ opacity: open ? 1 : 0 }}
               />
             </ListItemButton>
@@ -154,7 +155,7 @@ export default function LeftMenu(props: any) {
               >
                 <ViewColumnIcon />
               </ListItemIcon>
-              <ListItemText primary="Columns" sx={{ opacity: open ? 1 : 0 }} />
+              <ListItemText primary={t("Columns")} sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
           </Link>
         </ListItem>
@@ -176,7 +177,7 @@ export default function LeftMenu(props: any) {
               >
                 <PeopleIcon />
               </ListItemIcon>
-              <ListItemText primary="Users" sx={{ opacity: open ? 1 : 0 }} />
+              <ListItemText primary={t("Users")} sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
           </Link>
         </ListItem>

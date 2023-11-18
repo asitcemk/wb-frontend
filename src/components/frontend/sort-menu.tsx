@@ -3,6 +3,7 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { useTranslation } from "react-i18next";
 
 type Order = "asc" | "desc";
 
@@ -14,6 +15,7 @@ interface SortMenuProps {
 
 export default function SortMenu(props: SortMenuProps) {
   const { handleSort, order } = props;
+  const { t } = useTranslation();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -39,7 +41,7 @@ export default function SortMenu(props: SortMenuProps) {
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
       >
-        Created Date: {order === "asc" ? "ASC" : "DESC"}
+        {t("Created Date")}: {order === "asc" ? "ASC" : "DESC"}
         <ExpandMoreIcon />
       </Button>
       <Menu
@@ -58,10 +60,10 @@ export default function SortMenu(props: SortMenuProps) {
         }}
       >
         <MenuItem value="asc" onClick={(event) => onHandleSort(event, "asc")}>
-          Created Date : ASC
+          {t("Created Date")} : ASC
         </MenuItem>
         <MenuItem value="desc" onClick={(event) => onHandleSort(event, "desc")}>
-          Created Date : DESC
+          {t("Created Date")} : DESC
         </MenuItem>
       </Menu>
     </div>

@@ -53,7 +53,7 @@ const ForgotPasswordForm = (props: any) => {
       <DialogContent className="login-dialog-cont">
         <Grid container spacing={2}>
           <Grid item xs={12}>
-            Enter your email address to reset your password
+            {t("Enter your email address to reset your password")}
           </Grid>
           <Grid item xs={12}>
             <Field

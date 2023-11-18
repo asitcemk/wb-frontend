@@ -300,7 +300,7 @@ export default function GridView(props: any) {
     <>
       <Grid container direction="row" spacing={0}>
         <Grid container sm={10} xs={10}>
-          <Typography variant="h4">{heading}</Typography>
+          <Typography variant="h4">{t(heading)}</Typography>
         </Grid>
         <Grid container sm={2} xs={2} justifyContent="flex-end">
           {addUrl && addUrl !== "#" && (
@@ -413,7 +413,7 @@ export default function GridView(props: any) {
             </Table>
           </TableContainer>
           <TablePagination
-            rowsPerPageOptions={[5, 10, 25, 50, 100]}
+            rowsPerPageOptions={[5, 10, 25, 50, 100, 500, 1000]}
             component="div"
             count={count}
             rowsPerPage={rowsPerPage}

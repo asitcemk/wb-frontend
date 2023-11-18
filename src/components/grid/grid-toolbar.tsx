@@ -92,7 +92,7 @@ export default function GridToolbar(props: GridToolbarProps) {
           variant="subtitle1"
           component="div"
         >
-          {numSelected} selected
+          {numSelected} {t("selected")}
         </Typography>
       ) : (
         <Typography

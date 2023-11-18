@@ -59,7 +59,7 @@ const OTPForm = (props: any) => {
       <DialogContent className="login-dialog-cont">
         <Grid container spacing={2}>
           <Grid item xs={12} container justifyContent="center">
-            Please type the verification code sent to {sentEmail}
+            {t("Please type the verification code sent to")} {sentEmail}
           </Grid>
           <Grid
             className="frontend-otp"

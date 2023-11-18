@@ -1,5 +1,5 @@
 import React from "react";
-import { withTranslation } from "react-i18next";
+import { withTranslation, useTranslation } from "react-i18next";
 import MenuItem from "@mui/material/MenuItem";
 import MenuList from "@mui/material/MenuList";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
@@ -12,6 +12,7 @@ import { useNavigate } from "react-router-dom";
 
 const AccountMenu = ({ i18n }: { i18n: any }): any => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef<HTMLButtonElement>(null);
 
@@ -86,9 +87,9 @@ const AccountMenu = ({ i18n }: { i18n: any }): any => {
                   aria-labelledby="composition-button"
                   onKeyDown={handleListKeyDown}
                 >
-                  <MenuItem value="bn">My Account</MenuItem>
+                  <MenuItem value="bn">{t("My Account")}</MenuItem>
                   <MenuItem value="logout" onClick={logout}>
-                    Logout
+                    {t("Logout")}
                   </MenuItem>
                 </MenuList>
               </ClickAwayListener>

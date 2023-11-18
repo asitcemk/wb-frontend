@@ -185,9 +185,9 @@ function MyAccount(props: any) {
                 </Grid>
                 <Grid item xs={7}>
                   {profileDetails && profileDetails.status ? (
-                    <Chip size="small" label="Active" color="success" />
+                    <Chip size="small" label={t("Active")} color="success" />
                   ) : (
-                    <Chip size="small" label="Inactive" color="error" />
+                    <Chip size="small" label={t("Inactive")} color="error" />
                   )}
                 </Grid>
               </Grid>
