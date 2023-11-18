@@ -76,7 +76,7 @@ export default function GridHead(props: TableHeadProps) {
                 direction={orderBy === headCell.id ? order : "asc"}
                 onClick={createSortHandler(headCell.id)}
               >
-                {headCell.label}
+                {t(headCell.label)}
                 {orderBy === headCell.id ? (
                   <Box component="span" sx={visuallyHidden}>
                     {order === "desc"

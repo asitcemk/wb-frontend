@@ -47,7 +47,7 @@ const routes = (
   <Suspense fallback={<LinearProgress />}>
     <Routes>
       <Route element={<PublicRoute />}>
-        <Route path={route_url_pages.landing_page} element={<Home />} />
+        <Route index={true} path={route_url_pages.landing_page} element={<Home />} />
         <Route
           path={route_url_pages.registration_page}
           element={<Registration />}

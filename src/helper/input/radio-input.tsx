@@ -1,4 +1,3 @@
-import TextField from "@mui/material/TextField";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from '@mui/material/FormLabel';
 import RadioGroup from '@mui/material/RadioGroup';
@@ -12,19 +11,15 @@ interface IOptions{
   label: string;
 }
 
-interface TextFieldProps {
-  disabled?: boolean;
+interface RadioFieldProps {
   label?: string;
-  placeholder?: string;
-  readonly?: boolean;
   required?: boolean;
-  type?: string;
   options: IOptions[]
 }
 
-export const radioInput = (props: WrappedFieldProps & TextFieldProps) => {
+export const radioInput = (props: WrappedFieldProps & RadioFieldProps) => {
   const { touched, error } = props.meta;
-  const { input, label, type, required, placeholder, disabled, readonly, options } =
+  const { input, label, required, options } =
     props;
 
   return (

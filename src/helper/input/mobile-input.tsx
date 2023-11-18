@@ -1,6 +1,5 @@
 import FormControl from "@mui/material/FormControl";
 import MaskedInput from "react-text-mask";
-import PropTypes from "prop-types";
 import TextField from "@mui/material/TextField";
 import { WrappedFieldProps } from "redux-form";
 

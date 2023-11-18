@@ -1,0 +1,8 @@
+# Nodejs
+node_modules
+build
+# npm
+package-lock.json
+
+# environment variables
+.env

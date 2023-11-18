@@ -20,6 +20,7 @@ import {
   Link,
   useSearchParams,
 } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { gridText } from "./../../helper/commonFunctions";
 import { fetchColumns } from "./../../actions/common/columns";
 import { getData } from "./../../actions/common/grid";
@@ -42,7 +43,7 @@ export default function GridView(props: any) {
     deleteApi,
     token,
   } = props;
-
+  const { t } = useTranslation();
   const [order, setOrder] = useState<Order>("desc");
   const [orderBy, setOrderBy] = useState("createdAt");
   const [selected, setSelected] = useState<readonly number[]>([]);
@@ -398,7 +399,7 @@ export default function GridView(props: any) {
                         colSpan={selectedColumns.length + 1}
                         align="center"
                       >
-                        No result found.
+                        {t("No result found.")}
                       </TableCell>
                     </TableRow>
                   )}
@@ -423,7 +424,7 @@ export default function GridView(props: any) {
         </Paper>
         <FormControlLabel
           control={<Switch checked={dense} onChange={handleChangeDense} />}
-          label="Dense padding"
+          label={t("Dense padding")}
         />
       </Box>
     </>

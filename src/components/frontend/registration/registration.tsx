@@ -81,9 +81,9 @@ function Registration(props: any) {
             <Grid container spacing={2}>
               <Grid item sm={12}>
                 <Typography component="h5" variant="h5">
-                  Create an Wowbridge account
+                  {t("Create an Wowbridge account")}
                 </Typography>
-                <Typography color="secondary">It's Free</Typography>
+                <Typography color="secondary">{t("It's Free")}</Typography>
               </Grid>
               <Grid item sm={6} xs={12}>
                 <Field
@@ -243,7 +243,7 @@ function Registration(props: any) {
                     disabled={pristine || submitting}
                     onClick={reset}
                   >
-                    Reset
+                    {t("Reset")}
                   </Button>
                   <Button
                     type="submit"

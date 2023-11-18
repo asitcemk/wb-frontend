@@ -9,6 +9,7 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Avatar from "@mui/material/Avatar";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import ChangeLanguage from "./../../common/change-language";
@@ -16,6 +17,7 @@ import Login from "./../login";
 
 export default function Header(props: any) {
   const { showMessage } = props;
+  const { t } = useTranslation();
   const ref = createRef<any>();
 
   const isJsonStringified = (str: any): any => {
@@ -134,10 +136,10 @@ export default function Header(props: any) {
             {!localStorage.getItem("_auth") ? (
               <>
                 <Button color="inherit" onClick={onRegistrationClick}>
-                  Registration
+                  {t("Registration")}
                 </Button>
                 <Button color="inherit" onClick={loginOpen}>
-                  Login
+                  {t("Login")}
                 </Button>
               </>
             ) : null}
